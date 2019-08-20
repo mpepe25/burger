@@ -1,0 +1,13 @@
+<li class="list-group-item">
+    <p class="lead">{{this.burger_name}}</p>
+    <form action="burgers/update/{{this.id}}" method="POST">
+        <input type="hidden" name="devoured" value="{{#if devoured}}0{{else}}1{{/if}}">
+        <button class="btn btn-default btn-lg" type="submit">
+            {{#if devoured}}
+            Order More
+            {{else}}
+            Devour
+            {{/if}}
+            </button>
+    </form>
+</li>
